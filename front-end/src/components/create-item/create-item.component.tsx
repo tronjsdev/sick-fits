@@ -79,12 +79,23 @@ const CreateItem = () => {
           <Form
             onSubmit={async e => {
               e.preventDefault();
-              const res = await createItem();
-              console.log(res);
+              // eslint-disable-next-line no-plusplus
+              for (let i = 0; i < 17; i++) {
+                setStatex({
+                  ...statex,
+                  title: faker.commerce.productName(),
+                  description: faker.commerce.productMaterial(),
+                  price: faker.commerce.price(),
+                })
+                // eslint-disable-next-line no-await-in-loop
+                await createItem();
+              }
+              //const res = await createItem();
+              /*console.log(res);
               Router.push({
                 pathname: '/item',
                 query: { id: res.data.createItem.id },
-              });
+              });*/
             }}
           >
             <DisplayError error={error} />

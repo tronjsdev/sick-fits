@@ -9,10 +9,11 @@ import PriceTag from '../styles/PriceTag';
 
 interface Props {
   item: any;
+  page: number;
 }
 
 const Item: React.FunctionComponent<Props> = props => {
-  const { item } = props;
+  const { item, page } = props;
   return (
     <ItemStyles>
       {item.image && <img src={item.image} alt={item.title} />}
@@ -39,7 +40,7 @@ const Item: React.FunctionComponent<Props> = props => {
           <a>Edit</a>
         </Link>
         <button type="button">Add To Cart</button>
-        <DeleteItem id={item.id}>Delete</DeleteItem>
+        <DeleteItem id={item.id} page={page}>Delete</DeleteItem>
       </div>
     </ItemStyles>
   );

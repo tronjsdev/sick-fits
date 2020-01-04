@@ -58,7 +58,7 @@ const Items = ({ page }) => {
           return (
             <ItemList>
               {data.items.map(item => (
-                <Item key={item.id} item={item} />
+                <Item key={item.id} item={item} page={page} />
               ))}
             </ItemList>
           );

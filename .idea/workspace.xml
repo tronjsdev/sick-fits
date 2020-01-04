@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8249fd2-2cf3-41eb-951b-20725c47621a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front-end/src/pages/signup/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/pages/signup/signup.comp.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/pages/signup/signup.page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/scheme.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/scheme.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/styles/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/styles/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/create-item/create-item.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/create-item/create-item.component.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +102,7 @@
       <workItem from="1577871555331" duration="20263000" />
       <workItem from="1577930643548" duration="7430000" />
       <workItem from="1578018993912" duration="38513000" />
-      <workItem from="1578116721575" duration="25696000" />
+      <workItem from="1578116721575" duration="28624000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1577880963514</created>
@@ -255,7 +251,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578149473388</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Lesson 25">
+      <created>1578152850936</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1578152850936</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Lesson 25: fixed updated cache issue">
+      <created>1578155293049</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1578155293049</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +296,9 @@
     <MESSAGE value="Lesson 22" />
     <MESSAGE value="Lesson 23" />
     <MESSAGE value="Lesson 24" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 24" />
+    <MESSAGE value="Lesson 25" />
+    <MESSAGE value="Lesson 25: fixed updated cache issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 25: fixed updated cache issue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="406" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578044680251">
@@ -301,10 +313,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="859" y="453" width="192" height="102" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577891522763" />
-    <state x="473" y="-68" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578149473322">
+    <state x="500" y="130" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578155709555">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="473" y="-68" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578149473322" />
+    <state x="500" y="130" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578155709555" />
     <state width="1018" height="507" key="DebuggerActiveHint" timestamp="1578066734630">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
