@@ -80,7 +80,6 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
   if (ssr || PageComponent.getInitialProps) {
     WithApollo.getInitialProps = async ctx => {
       const { AppTree, query } = ctx;
-      debugger
       // Initialize ApolloClient, add it to the ctx object so
       // we can use it in `PageComponent.getInitialProp`.
       // eslint-disable-next-line no-shadow,no-multi-assign
@@ -90,7 +89,6 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
       let pageProps = {};
       if (PageComponent.getInitialProps) {
         pageProps = await PageComponent.getInitialProps(ctx);
-        debugger
       }
 
       // Only on the server:
@@ -106,7 +104,6 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
           try {
             // Run all GraphQL queries
             const { getDataFromTree } = await import('@apollo/react-ssr');
-            debugger
             await getDataFromTree(
               <AppTree
                 pageProps={{

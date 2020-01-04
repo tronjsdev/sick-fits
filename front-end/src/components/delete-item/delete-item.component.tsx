@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
-import { ALL_ITEMS_QUERY } from '@src/components';
+import { ALL_ITEMS_QUERY } from '@src/pages/items/components/items.comp';
 
 const DELETE_ITEM_MUTATION = gql`
   mutation DELETE_ITEM_MUTATION($id: ID!) {

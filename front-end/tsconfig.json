@@ -4,7 +4,7 @@
     "module": "esnext",
     "jsx": "preserve",
     "lib": ["dom", "es2017"],
-    "baseUrl": "./",
+    "baseUrl": ".",
     "moduleResolution": "node",
     "strict": true,
     "allowJs": true,
@@ -25,9 +25,10 @@
     //"rootDirs": ["src"],
     "paths": {
       "@components": ["src/components"],
+      "@components/styles": ["src/components/styles"],
       "@libs": ["src/libs"],
       "@interfaces": ["src/interfaces"],
-      "@src/*": ["src/*"]
+      "@src/*": ["./src/*"]
     }
   },
   "exclude": ["dist", ".next", "out", "next.config.js"],
