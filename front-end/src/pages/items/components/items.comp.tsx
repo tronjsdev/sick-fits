@@ -5,9 +5,11 @@ import { styled } from '@libs';
 import { Item } from '@src/components';
 import { Pagination } from '@src/pages/items/components/pagination.comp';
 
+import { perPage } from '../../../config/config';
+
 const ALL_ITEMS_QUERY = gql`
-  query ALL_ITEMS_QUERY {
-    items {
+  query ALL_ITEMS_QUERY($skip: Int = 0, $first: Int=${perPage}) {
+    items(skip: $skip, first: $first, orderBy: createdAt_DESC) {
       id
       title
       price
@@ -34,7 +36,13 @@ const Items = ({ page }) => {
   return (
     <Center>
       <Pagination page={page} />
-      <Query query={ALL_ITEMS_QUERY}>
+      <Query
+        query={ALL_ITEMS_QUERY}
+        variables={{
+          skip: perPage * (page - 1),
+          first: perPage,
+        }}
+      >
         {({ data, error, loading }) => {
           if (loading) {
             return <p>Loading...</p>;
