@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8249fd2-2cf3-41eb-951b-20725c47621a" name="Default Changelist" comment="Lession 1 to 20 :D" />
+    <list default="true" id="e8249fd2-2cf3-41eb-951b-20725c47621a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/front-end/src/pages/item/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/pages/item/item.page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/pages/item/single-item.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/libs/with-apollo.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/libs/with-apollo.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +52,9 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/front-end/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front-end/src/pages/item" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/front-end/src/libs" />
@@ -92,7 +101,7 @@
       <workItem from="1577871555331" duration="20263000" />
       <workItem from="1577930643548" duration="7430000" />
       <workItem from="1578018993912" duration="38513000" />
-      <workItem from="1578116721575" duration="6097000" />
+      <workItem from="1578116721575" duration="7504000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1577880963514</created>
@@ -185,7 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578122591905</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Lession 1 to 20 :D">
+      <created>1578122929132</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578122929132</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Move out main readme file">
+      <created>1578122999695</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1578122999695</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +234,8 @@
     </ignored-roots>
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Lession 1 to 20 :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lession 1 to 20 :D" />
+    <MESSAGE value="Move out main readme file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move out main readme file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="406" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578044680251">
@@ -226,10 +250,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="859" y="453" width="192" height="102" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577891522763" />
-    <state x="487" y="86" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578122928999">
+    <state x="485" y="64" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578122999630">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="487" y="86" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578122928999" />
+    <state x="485" y="64" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578122999630" />
     <state width="1018" height="507" key="DebuggerActiveHint" timestamp="1578066734630">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -302,10 +326,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="447" key="SwitcherDM/0.0.1920.1080@0.0.1920.1080" timestamp="1577895721217" />
-    <state x="553" y="253" width="804" height="523" key="Vcs.Push.Dialog.v2" timestamp="1578122933598">
+    <state x="551" y="231" width="804" height="523" key="Vcs.Push.Dialog.v2" timestamp="1578123001416">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="553" y="253" width="804" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1578122933598" />
+    <state x="551" y="231" width="804" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1578123001416" />
     <state x="131" y="237" width="697" height="584" key="find.popup" timestamp="1578117593897">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

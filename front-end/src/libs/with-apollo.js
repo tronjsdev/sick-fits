@@ -79,7 +79,7 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
 
   if (ssr || PageComponent.getInitialProps) {
     WithApollo.getInitialProps = async ctx => {
-      const { AppTree } = ctx;
+      const { AppTree, query } = ctx;
       debugger
       // Initialize ApolloClient, add it to the ctx object so
       // we can use it in `PageComponent.getInitialProp`.
@@ -112,7 +112,7 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
                 pageProps={{
                   ...pageProps,
                   apolloClient,
-                  //query: pageProps.query
+                  query
                 }}
               />
             );
@@ -135,7 +135,7 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
       return {
         ...pageProps,
         apolloState,
-        //query: pageProps.query
+        query
       };
     };
   }
