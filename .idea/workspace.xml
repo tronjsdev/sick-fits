@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8249fd2-2cf3-41eb-951b-20725c47621a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/front-end/src/pages/signup/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/pages/signup/signup.page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/scheme.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/scheme.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/pages/items/components/items.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/pages/items/components/items.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/pages/items/components/items.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/pages/items/items.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/pages/items/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/pages/items/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +31,9 @@
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="1VmwPUMWOuLt4TBCpswWgoO9pR5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -51,8 +55,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/front-end/src/pages/items/components" />
       <recent name="$PROJECT_DIR$/front-end/src/pages/items" />
+      <recent name="$PROJECT_DIR$/front-end/src/pages/items/components" />
       <recent name="$PROJECT_DIR$/front-end/src/pages/item" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -101,7 +105,7 @@
       <workItem from="1577871555331" duration="20263000" />
       <workItem from="1577930643548" duration="7430000" />
       <workItem from="1578018993912" duration="38513000" />
-      <workItem from="1578116721575" duration="15296000" />
+      <workItem from="1578116721575" duration="22357000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1577880963514</created>
@@ -229,7 +233,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578133391283</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Lesson 23">
+      <created>1578134659941</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1578134659941</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Lesson 24">
+      <created>1578149263842</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1578149263842</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +276,9 @@
     <MESSAGE value="Move out main readme file" />
     <MESSAGE value="Update apollo client to support query object" />
     <MESSAGE value="Lesson 22" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 22" />
+    <MESSAGE value="Lesson 23" />
+    <MESSAGE value="Lesson 24" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 24" />
   </component>
   <component name="WindowStateProjectService">
     <state x="406" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578044680251">
@@ -273,10 +293,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="859" y="453" width="192" height="102" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577891522763" />
-    <state x="479" y="-2" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578133391227">
+    <state x="475" y="-46" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578149263772">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="479" y="-2" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578133391227" />
+    <state x="475" y="-46" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578149263772" />
     <state width="1018" height="507" key="DebuggerActiveHint" timestamp="1578066734630">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -357,10 +377,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="131" y="237" width="697" height="584" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578128956497" />
-    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1578133583207">
+    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1578149348997">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578133583207" />
+    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578149348997" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

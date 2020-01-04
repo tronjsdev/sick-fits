@@ -1,1 +1,1 @@
-export {ItemsPage as default} from './components/items.page';
+export {ItemsPage as default} from './items.page';

@@ -2,7 +2,7 @@ import React from 'react';
 import { AppPage } from 'next';
 import { withApollo } from '@libs';
 
-import { Items } from './items.comp';
+import { Items } from './components/items.comp';
 
 const Page: AppPage = ({ query: { page } }: any) => {
   return (
