@@ -1,0 +1,16 @@
+{
+  "env": {
+    "development": {
+      "presets": ["next/babel", "@emotion/babel-preset-css-prop"],
+      "plugins": [["emotion"], ["@babel/plugin-proposal-optional-chaining"], ["graphql-tag"]]
+    },
+    "production": {
+      "presets": ["next/babel", "@emotion/babel-preset-css-prop"],
+      "plugins": [["emotion"], ["@babel/plugin-proposal-optional-chaining"], ["graphql-tag"]]
+    },
+    "test": {
+      "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }], ["@emotion/babel-preset-css-prop"]],
+      "plugins": [["emotion"], ["@babel/plugin-proposal-optional-chaining"], ["graphql-tag"]]
+    }
+  }
+}

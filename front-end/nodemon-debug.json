@@ -1,0 +1,7 @@
+{
+  "watch": ["src/server", "static"],
+  "//exec": "ts-node --project tsconfig.server.json src/server/bin/www.ts",
+  "exec": "node --inspect=127.0.0.1:9230 --require ts-node/register src/server/bin/www.ts",
+  "//exec_2": "If you need to use advanced node.js CLI arguments (e.g. --inspect), use them with node -r ts-node/register instead of the ts-node CL",
+  "ext": "js ts"
+}
