@@ -25,5 +25,5 @@ type Query {
   # itemsConnection(where: ItemWhereInput, orderBy: ItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ItemConnection!
   itemsConnection(where: ItemWhereInput): ItemConnection!
 
-  users(where: UserWhereInput): User
+  users(where: UserWhereInput): [User!]!
 }

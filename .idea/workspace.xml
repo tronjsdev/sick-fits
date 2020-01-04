@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e8249fd2-2cf3-41eb-951b-20725c47621a" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/front-end/src/pages/signup/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/pages/signup/signup.comp.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/front-end/src/pages/signup/signup.page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/pages/items/components/items.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/pages/items/items.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/pages/items/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/pages/items/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/scheme.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/scheme.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/styles/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/styles/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,7 @@
     <property name="ChangesTree.GroupingKeys" value="directory&#10;repository" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/front-end/src/pages/signup" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -60,11 +61,11 @@
       <recent name="$PROJECT_DIR$/front-end/src/pages/item" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front-end/src/pages/signup" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/front-end/src/libs" />
       <recent name="$PROJECT_DIR$/front-end/src/components" />
       <recent name="$PROJECT_DIR$/front-end/src/config" />
-      <recent name="$PROJECT_DIR$/backend" />
     </key>
   </component>
   <component name="RunManager" selected="Attach to Node.js/Chrome.Attach">
@@ -105,7 +106,7 @@
       <workItem from="1577871555331" duration="20263000" />
       <workItem from="1577930643548" duration="7430000" />
       <workItem from="1578018993912" duration="38513000" />
-      <workItem from="1578116721575" duration="22357000" />
+      <workItem from="1578116721575" duration="25696000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1577880963514</created>
@@ -247,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578149263842</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Lesson 24">
+      <created>1578149473388</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1578149473388</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,10 +301,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="859" y="453" width="192" height="102" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577891522763" />
-    <state x="475" y="-46" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578149263772">
+    <state x="473" y="-68" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578149473322">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="475" y="-46" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578149263772" />
+    <state x="473" y="-68" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578149473322" />
     <state width="1018" height="507" key="DebuggerActiveHint" timestamp="1578066734630">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
