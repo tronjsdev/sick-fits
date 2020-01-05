@@ -20,7 +20,14 @@ function createApolloClient(initialState = {}) {
     ssrMode: typeof window === 'undefined', // Disables forceFetch on the server (so queries are only run once)
     link: new HttpLink({
       uri: process.env.NODE_ENV === 'development' ? endpoint : endpoint, // Server URL (must be absolute)
-      credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
+      //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Sending_a_request_with_credentials_included
+      //https://javascript.info/fetch-crossorigin#credentials
+      //credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
+      // `include`: to tell the browser to include credentials (e.g: cookies) on every request to ALL sites
+      // and server should setting cors to support the response header like this:
+      // Access-Control-Allow-Credentials: true
+      // Access-Control-Allow-Origin: http://localhost:7777
+      credentials: 'include',
       fetch,
     }),
     cache: new InMemoryCache().restore(initialState),
