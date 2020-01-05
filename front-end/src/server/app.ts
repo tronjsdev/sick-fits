@@ -5,7 +5,6 @@
 
 import nextjsApp from 'next';
 import express from 'express';
-import cors from 'cors';
 import { Issuer } from 'openid-client';
 
 import { sessionConfig } from './config';
@@ -23,12 +22,6 @@ const appPromise = async () => {
   //app.enable('trust proxy');
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
-  app.use(
-    cors({
-      credentials: true,
-      origin: ['http://localhost:4444', 'http://localhost:7777'],
-    })
-  );
 
   //app.locals.identixIssuer = identixIssuer;
 

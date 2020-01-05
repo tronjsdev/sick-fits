@@ -3,40 +3,39 @@ import Router from 'next/router';
 
 const LOGIN_URL = '/auth/login';
 
-export const auth = ctx => {
+const auth = ctx => {
   // const { token } = nextCookie(ctx);
   const { req, res, asPath } = ctx;
-  const props: any = {};
-  if (req) {
+  const initProps: any = {};
+  if (typeof window === 'undefined') {
     const { userContext, isAuthenticated, serverData } = res.locals;
-    props.isAuthenticated = isAuthenticated;
-    props.serverData = serverData;
-    props.userInfo = userContext?.userInfo;
+    initProps.isAuthenticated = isAuthenticated;
+    initProps.serverData = serverData;
+    initProps.userInfo = userContext?.userInfo;
   } else {
     const {
       __NEXT_DATA__: { props: winProps },
     }: any = window;
     const { serverData, isAuthenticated, userInfo } = winProps;
-    props.isAuthenticated = isAuthenticated;
-    props.serverData = serverData;
-    props.userInfo = userInfo;
+    initProps.isAuthenticated = isAuthenticated;
+    initProps.serverData = serverData;
+    initProps.userInfo = userInfo;
   }
 
   const nextUrl = encodeURIComponent(asPath);
   const loginUrl = nextUrl ? `${LOGIN_URL}?nextUrl=${nextUrl}` : LOGIN_URL;
 
   // If there's no token, it means the user is not logged in.
-  if (!props.isAuthenticated) {
+  if (!initProps.isAuthenticated) {
     if (typeof window === 'undefined') {
       ctx.res.writeHead(302, { Location: loginUrl });
       ctx.res.end();
     } else {
-      console.log('auth redirects to window.location.href');
       Router.push(loginUrl);
     }
   }
 
-  return props;
+  return initProps;
 };
 
 export const logout = () => {
@@ -67,11 +66,11 @@ export const withAuthSync = WrappedComponent => {
   };
 
   Wrapper.getInitialProps = async ctx => {
-    const props = auth(ctx);
-
+    const initProps = auth(ctx);
+    const { query } = ctx;
     const componentProps =
       WrappedComponent.getInitialProps && (await WrappedComponent.getInitialProps(ctx));
-    return { ...componentProps };
+    return { ...componentProps, initProps, query };
   };
 
   return Wrapper;

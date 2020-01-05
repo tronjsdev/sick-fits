@@ -1,8 +1,9 @@
 import React from 'react';
-import {styled, withApollo} from '@libs';
+import { styled, withApollo } from '@libs';
 
-import { SignupComp} from './signup.comp';
-import { SigninComp} from './signin.comp';
+import { SignupComp } from './signup.comp';
+import { SigninComp } from './signin.comp';
+import { RequestReset } from './request-reset.comp';
 
 const Columns = styled.div`
   display: grid;
@@ -15,7 +16,7 @@ const SignupPage = () => {
     <Columns>
       <SignupComp />
       <SigninComp />
-      
+      <RequestReset />
     </Columns>
   );
 };

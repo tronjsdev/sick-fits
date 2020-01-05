@@ -15,9 +15,7 @@ export const CURRENT_USER_QUERY = gql`
 export const useUser = () => {
   const [user, setUser] = React.useState();
   const payload = useQuery(CURRENT_USER_QUERY);
-  debugger;
   React.useEffect(() => {
-    debugger;
     if (payload.data) {
       setUser(payload.data.me);
     }

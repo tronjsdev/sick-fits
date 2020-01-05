@@ -27,8 +27,9 @@
       "@components": ["src/components"],
       "@components/styles": ["src/components/styles"],
       "@libs": ["src/libs"],
+      "@layouts": ["src/layouts"],
       "@interfaces": ["src/interfaces"],
-      "@src/*": ["./src/*"]
+      "@src/*": ["src/*"]
     }
   },
   "exclude": ["dist", ".next", "out", "next.config.js"],
