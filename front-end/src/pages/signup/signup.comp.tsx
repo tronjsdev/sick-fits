@@ -2,7 +2,7 @@ import React from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import { Form } from '@components/styles';
-import { DisplayError } from '@components';
+import { CURRENT_USER_QUERY, DisplayError } from '@components';
 import faker from 'faker';
 
 const SIGNUP_MUTATION = gql`
@@ -23,6 +23,7 @@ const SignupComp = () => {
   });
   const [signup, { loading, data, error }] = useMutation(SIGNUP_MUTATION, {
     variables: signupFormData,
+    refetchQueries: [{ query: CURRENT_USER_QUERY }],
   });
   const handleInput = React.useCallback(
     e => {

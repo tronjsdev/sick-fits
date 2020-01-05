@@ -1,7 +1,8 @@
 import React from 'react';
 import {styled, withApollo} from '@libs';
 
-import { SignupComp } from './signup.comp';
+import { SignupComp} from './signup.comp';
+import { SigninComp} from './signin.comp';
 
 const Columns = styled.div`
   display: grid;
@@ -13,8 +14,8 @@ const SignupPage = () => {
   return (
     <Columns>
       <SignupComp />
-      <SignupComp />
-      <SignupComp />
+      <SigninComp />
+      
     </Columns>
   );
 };
