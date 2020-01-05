@@ -52,7 +52,7 @@ const Mutations = {
     ctx.response.cookie("token", token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 30,
-      path: '/'
+      secure: process.env.NODE_ENV === "production"
     });
     return user;
   }

@@ -13,8 +13,9 @@ let apolloClient = null;
 /**
  * Creates and configures the ApolloClient
  * @param  {Object} [initialState={}]
+ * @param headers
  */
-function createApolloClient(initialState = {}) {
+function createApolloClient(initialState = {}, headers) {
   // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient
   return new ApolloClient({
     ssrMode: typeof window === 'undefined', // Disables forceFetch on the server (so queries are only run once)
@@ -29,6 +30,10 @@ function createApolloClient(initialState = {}) {
       // Access-Control-Allow-Origin: http://localhost:7777
       credentials: 'include',
       fetch,
+      fetchOptions: {
+        credentials: 'include',
+      },
+      headers,
     }),
     cache: new InMemoryCache().restore(initialState),
   });
@@ -38,17 +43,18 @@ function createApolloClient(initialState = {}) {
  * Always creates a new apollo client on the server
  * Creates or reuses apollo client in the browser.
  * @param  {Object} initialState
+ * @param headers
  */
-function initApolloClient(initialState) {
+function initApolloClient(initialState, headers) {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
   if (typeof window === 'undefined') {
-    return createApolloClient(initialState);
+    return createApolloClient(initialState, headers);
   }
 
   // Reuse client on the client-side
   if (!apolloClient) {
-    apolloClient = createApolloClient(initialState);
+    apolloClient = createApolloClient(initialState, headers);
   }
 
   return apolloClient;
@@ -64,11 +70,13 @@ function initApolloClient(initialState) {
  */
 export function withApollo(PageComponent, { ssr = true } = {}) {
   // eslint-disable-next-line no-shadow
-  const WithApollo = ({ apolloClient, apolloState, ...pageProps }) => {
-    const client = apolloClient || initApolloClient(apolloState);
+  const WithApollo = ({ apolloClient, apolloState, Layout, headers, ...pageProps }) => {
+    const client = apolloClient || initApolloClient(apolloState, headers);
     return (
       <ApolloProvider client={client}>
-        <PageComponent {...pageProps} />
+        <Layout>
+          <PageComponent {...pageProps} />
+        </Layout>
       </ApolloProvider>
     );
   };
@@ -87,10 +95,11 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
   if (ssr || PageComponent.getInitialProps) {
     WithApollo.getInitialProps = async ctx => {
       const { AppTree, query } = ctx;
+      const headers = ctx.req ? ctx.req.headers : null;
       // Initialize ApolloClient, add it to the ctx object so
       // we can use it in `PageComponent.getInitialProp`.
       // eslint-disable-next-line no-shadow,no-multi-assign
-      const apolloClient = (ctx.apolloClient = initApolloClient());
+      const apolloClient = (ctx.apolloClient = initApolloClient(null, headers));
 
       // Run wrapped getInitialProps methods
       let pageProps = {};
@@ -103,7 +112,7 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
         // When redirecting, the response is finished.
         // No point in continuing to render
         if (ctx.res && ctx.res.finished) {
-          return pageProps;
+          return { ...pageProps, headers };
         }
 
         // Only if ssr is enabled
@@ -116,7 +125,7 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
                 pageProps={{
                   ...pageProps,
                   apolloClient,
-                  query
+                  query,
                 }}
               />
             );
@@ -138,8 +147,9 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
 
       return {
         ...pageProps,
+        headers,
         apolloState,
-        query
+        query,
       };
     };
   }

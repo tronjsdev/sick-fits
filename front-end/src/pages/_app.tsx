@@ -9,9 +9,7 @@ function MyApp({ Component, pageProps }) {
   const { title, ...rest } = pageProps;
   return (
     <ThemeProvider theme={theme}>
-      <Layout title={title}>
-        <Component {...rest} />
-      </Layout>
+      <Component {...rest} Layout={Layout} />
     </ThemeProvider>
   );
 }

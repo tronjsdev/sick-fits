@@ -5,6 +5,7 @@
 
 import nextjsApp from 'next';
 import express from 'express';
+import cors from 'cors';
 import { Issuer } from 'openid-client';
 
 import { sessionConfig } from './config';
@@ -22,6 +23,12 @@ const appPromise = async () => {
   //app.enable('trust proxy');
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
+  app.use(
+    cors({
+      credentials: true,
+      origin: ['http://localhost:4444', 'http://localhost:7777'],
+    })
+  );
 
   //app.locals.identixIssuer = identixIssuer;
 
@@ -31,16 +38,15 @@ const appPromise = async () => {
 
   app.use(sessionConfig);
   //app.use(passportMiddleware(app));
-  
-  
+
   app.use((req, res, next) => {
     res.locals.userContext = req.user || null;
     res.locals.currentPath = req.path;
     res.locals.loginErrorMsg = req.session.loginErrorMsg;
     res.locals.isAuthenticated = req.isAuthenticated();
-    
+
     delete req.session.message;
-    
+
     next();
   });
 

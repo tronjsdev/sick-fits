@@ -34,7 +34,7 @@ const CreateItem = () => {
     description: faker.commerce.productMaterial(),
     image: '',
     largeImage: '',
-    price: faker.commerce.price(),
+    price: parseInt(faker.commerce.price(),10),
   });
   const handleChange = React.useCallback(
     e => {
@@ -85,7 +85,7 @@ const CreateItem = () => {
                   ...statex,
                   title: faker.commerce.productName(),
                   description: faker.commerce.productMaterial(),
-                  price: faker.commerce.price(),
+                  price: parseInt(faker.commerce.price(),10),
                 })
                 // eslint-disable-next-line no-await-in-loop
                 await createItem();

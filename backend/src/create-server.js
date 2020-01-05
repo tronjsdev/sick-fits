@@ -6,6 +6,13 @@ const db = require("./db");
 
 // Create the Graphql Yoga Server
 
+// context
+const context = req => ({
+  ...req,
+  userId: req.request.userId,
+  db
+});
+
 const createServer = () => {
   return new GraphQLServer({
     typeDefs: "./src/scheme.graphql",
@@ -16,7 +23,7 @@ const createServer = () => {
     resolverValidationOptions: {
       requireResolversForResolveType: false
     },
-    context: req => ({ ...req, db })
+    context
   });
 };
 
