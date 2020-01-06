@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import NavStyles from '@src/components/styles/NavStyles';
-import { useUser } from '@src/libs/hooks';
+import { useUser } from '@libs';
 import { Signout } from '@components';
 
 const Nav = () => {
