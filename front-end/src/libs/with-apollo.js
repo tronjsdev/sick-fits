@@ -9,7 +9,7 @@ import gql from 'graphql-tag';
 
 import { endpoint } from '../config/config';
 
-let apolloClient = null;
+let globalApolloClient = null;
 let headers = null;
 
 /**
@@ -75,11 +75,11 @@ function initApolloClient(initialState) {
   }
 
   // Reuse client on the client-side
-  if (!apolloClient) {
-    apolloClient = createApolloClient(initialState);
+  if (!globalApolloClient) {
+    globalApolloClient = createApolloClient(initialState);
   }
 
-  return apolloClient;
+  return globalApolloClient;
 }
 
 /**
@@ -120,8 +120,8 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
       headers = ctx.req ? ctx.req.headers : null;
       // Initialize ApolloClient, add it to the ctx object so
       // we can use it in `PageComponent.getInitialProp`.
-      // eslint-disable-next-line no-shadow,no-multi-assign
-      const apolloClient = (ctx.apolloClient = initApolloClient(null));
+      // eslint-disable-next-line no-multi-assign
+      const apolloClient = (ctx.apolloClient = initApolloClient());
 
       // Run wrapped getInitialProps methods
       let pageProps = {};
@@ -134,14 +134,15 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
         // When redirecting, the response is finished.
         // No point in continuing to render
         if (ctx.res && ctx.res.finished) {
-          return { ...pageProps };
+          return {...pageProps};
         }
 
         // Only if ssr is enabled
         if (ssr) {
+          debugger;
           try {
             // Run all GraphQL queries
-            const { getDataFromTree, getMarkupFromTree } = await import('@apollo/react-ssr');
+            const { getDataFromTree } = await import('@apollo/react-ssr');
             await getDataFromTree(
               <AppTree
                 pageProps={{
