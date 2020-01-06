@@ -5,6 +5,7 @@ import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
 import fetch from 'isomorphic-unfetch';
+import gql from 'graphql-tag';
 
 import { endpoint } from '../config/config';
 
@@ -16,6 +17,13 @@ let apolloClient = null;
  * @param headers
  */
 function createApolloClient(initialState = {}, headers) {
+  const cache = new InMemoryCache().restore(initialState);
+  cache.writeData({
+    data: {
+      cartOpen: true,
+    },
+  });
+
   // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient
   return new ApolloClient({
     ssrMode: typeof window === 'undefined', // Disables forceFetch on the server (so queries are only run once)
@@ -35,7 +43,22 @@ function createApolloClient(initialState = {}, headers) {
       },
       headers,
     }),
-    cache: new InMemoryCache().restore(initialState),
+    cache,
+    resolvers: {
+      Mutation: {
+        // eslint-disable-next-line no-shadow
+        toggleCart: (_root, variables, { cache, getCacheKey }) => {
+          const query = gql`
+            {
+              cartOpen @client
+            }
+          `;
+          const { cartOpen } = cache.readQuery({ query });
+          cache.writeQuery({ query, data: { cartOpen: !cartOpen } });
+          //cache.writeData({ data: { cartOpen: !previous } });
+        },
+      },
+    },
   });
 }
 

@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import NavStyles from '@src/components/styles/NavStyles';
-import { useUser } from '@libs';
+import { useToggleCart, useUser } from '@libs';
 import { Signout } from '@components';
 
 const Nav = () => {
-  const { data }:any = useUser();
-  const { me } = data||{};
+  const { data }: any = useUser();
+  const [toggleCart] = useToggleCart();
+  const { me } = data || {};
   return (
     <NavStyles>
       <Link href="/items">
@@ -26,6 +27,10 @@ const Nav = () => {
           <Link href="/me">
             <a>Account</a>
           </Link>
+          
+          <button type="button" onClick={()=>toggleCart()}>
+            My Cart
+          </button>
 
           <Signout />
         </>
