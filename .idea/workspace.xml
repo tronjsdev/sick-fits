@@ -4,7 +4,7 @@
     <list default="true" id="e8249fd2-2cf3-41eb-951b-20725c47621a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/nav/nav.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/nav/nav.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/libs/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/libs/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/libs/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/libs/hooks.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/src/pages/sell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/pages/sell.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,17 +53,17 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/front-end/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front-end/src/pages/items" />
+      <recent name="$PROJECT_DIR$/front-end/src/pages/items/components" />
+      <recent name="$PROJECT_DIR$/front-end/src/pages/item" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/front-end/src/pages/reset" />
       <recent name="$PROJECT_DIR$/front-end/src/pages/signup" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/front-end/src/libs" />
       <recent name="$PROJECT_DIR$/front-end/src/components" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/front-end/src/pages/items" />
-      <recent name="$PROJECT_DIR$/front-end/src/pages/items/components" />
-      <recent name="$PROJECT_DIR$/front-end/src/pages/item" />
     </key>
   </component>
   <component name="RunManager" selected="Attach to Node.js/Chrome.Attach-Backend">

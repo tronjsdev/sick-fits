@@ -5,14 +5,15 @@ import { useUser } from '@libs';
 import { Signout } from '@components';
 
 const Nav = () => {
-  const user = useUser();
+  const { data }:any = useUser();
+  const { me } = data||{};
   return (
     <NavStyles>
       <Link href="/items">
         <a>Shop</a>
       </Link>
 
-      {user && (
+      {me && (
         <>
           <Link href="/sell">
             <a>Sell</a>
@@ -29,7 +30,7 @@ const Nav = () => {
           <Signout />
         </>
       )}
-      {!user && (
+      {!me && (
         <Link href="/signup">
           <a>Sign In</a>
         </Link>
