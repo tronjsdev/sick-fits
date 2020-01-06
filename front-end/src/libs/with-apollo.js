@@ -10,17 +10,17 @@ import gql from 'graphql-tag';
 import { endpoint } from '../config/config';
 
 let apolloClient = null;
+let headers = null;
 
 /**
  * Creates and configures the ApolloClient
  * @param  {Object} [initialState={}]
- * @param headers
  */
-function createApolloClient(initialState = {}, headers) {
+function createApolloClient(initialState = {}) {
   const cache = new InMemoryCache().restore(initialState);
   cache.writeData({
     data: {
-      cartOpen: true,
+      cartOpen: false,
     },
   });
 
@@ -66,18 +66,17 @@ function createApolloClient(initialState = {}, headers) {
  * Always creates a new apollo client on the server
  * Creates or reuses apollo client in the browser.
  * @param  {Object} initialState
- * @param headers
  */
-function initApolloClient(initialState, headers) {
+function initApolloClient(initialState) {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
   if (typeof window === 'undefined') {
-    return createApolloClient(initialState, headers);
+    return createApolloClient(initialState);
   }
 
   // Reuse client on the client-side
   if (!apolloClient) {
-    apolloClient = createApolloClient(initialState, headers);
+    apolloClient = createApolloClient(initialState);
   }
 
   return apolloClient;
@@ -93,8 +92,8 @@ function initApolloClient(initialState, headers) {
  */
 export function withApollo(PageComponent, { ssr = true } = {}) {
   // eslint-disable-next-line no-shadow
-  const WithApollo = ({ apolloClient, apolloState, Layout, headers, ...pageProps }) => {
-    const client = apolloClient || initApolloClient(apolloState, headers);
+  const WithApollo = ({ apolloClient, apolloState, Layout, ...pageProps }) => {
+    const client = apolloClient || initApolloClient(apolloState);
     return (
       <ApolloProvider client={client}>
         <Layout>
@@ -118,11 +117,11 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
   if (ssr || PageComponent.getInitialProps) {
     WithApollo.getInitialProps = async ctx => {
       const { AppTree, query } = ctx;
-      const headers = ctx.req ? ctx.req.headers : null;
+      headers = ctx.req ? ctx.req.headers : null;
       // Initialize ApolloClient, add it to the ctx object so
       // we can use it in `PageComponent.getInitialProp`.
       // eslint-disable-next-line no-shadow,no-multi-assign
-      const apolloClient = (ctx.apolloClient = initApolloClient(null, headers));
+      const apolloClient = (ctx.apolloClient = initApolloClient(null));
 
       // Run wrapped getInitialProps methods
       let pageProps = {};
@@ -135,14 +134,14 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
         // When redirecting, the response is finished.
         // No point in continuing to render
         if (ctx.res && ctx.res.finished) {
-          return { ...pageProps, headers };
+          return { ...pageProps };
         }
 
         // Only if ssr is enabled
         if (ssr) {
           try {
             // Run all GraphQL queries
-            const { getDataFromTree } = await import('@apollo/react-ssr');
+            const { getDataFromTree, getMarkupFromTree } = await import('@apollo/react-ssr');
             await getDataFromTree(
               <AppTree
                 pageProps={{
@@ -170,7 +169,6 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
 
       return {
         ...pageProps,
-        headers,
         apolloState,
         query,
       };
