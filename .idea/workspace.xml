@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8249fd2-2cf3-41eb-951b-20725c47621a" name="Default Changelist" comment="Lesson 30">
+    <list default="true" id="e8249fd2-2cf3-41eb-951b-20725c47621a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/libs/auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/libs/auth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/pages/_app.old.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/pages/sell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/pages/sell.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/server/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/server/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/datamodel.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/datamodel.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/resolvers/mutation.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/resolvers/mutation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +112,7 @@
       <workItem from="1578116721575" duration="28640000" />
       <workItem from="1578186992601" duration="5182000" />
       <workItem from="1578192308284" duration="35576000" />
-      <workItem from="1578286277674" duration="3585000" />
+      <workItem from="1578286277674" duration="5092000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1577880963514</created>
@@ -355,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578241123103</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Lesson 30">
+      <created>1578290030300</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1578290030300</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,10 +415,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="859" y="453" width="192" height="102" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577891522763" />
-    <state x="0" y="0" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578286292186">
+    <state x="0" y="0" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578290030198">
       <screen x="0" y="0" width="1920" height="1045" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1045@0.0.1920.1045" timestamp="1578286292186" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1045@0.0.1920.1045" timestamp="1578290030198" />
     <state x="477" y="8" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578241123049" />
     <state width="1084" height="507" key="DebuggerActiveHint" timestamp="1578215733391">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -485,9 +489,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="439" y="65" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1578122783155" />
-    <state x="207" y="266" width="621" height="524" key="StructurePopup" timestamp="1578234403622">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="207" y="257" width="621" height="508" key="StructurePopup" timestamp="1578290582986">
+      <screen x="0" y="0" width="1920" height="1045" />
     </state>
+    <state x="207" y="257" width="621" height="508" key="StructurePopup/0.0.1920.1045@0.0.1920.1045" timestamp="1578290582986" />
     <state x="207" y="266" width="621" height="524" key="StructurePopup/0.0.1920.1080@0.0.1920.1080" timestamp="1578234403622" />
     <state width="498" height="447" key="SwitcherDM" timestamp="1578233955716">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -497,9 +502,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="549" y="209" width="804" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1578231758770" />
-    <state x="131" y="237" width="697" height="584" key="find.popup" timestamp="1578242443162">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="131" y="229" width="697" height="584" key="find.popup" timestamp="1578291069348">
+      <screen x="0" y="0" width="1920" height="1045" />
     </state>
+    <state x="131" y="229" width="697" height="584" key="find.popup/0.0.1920.1045@0.0.1920.1045" timestamp="1578291069348" />
     <state x="131" y="237" width="697" height="584" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578242443162" />
     <state x="143" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1578238904248">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -511,7 +517,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/backend/src/resolvers/mutation.js</url>
-          <line>53</line>
+          <line>68</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
