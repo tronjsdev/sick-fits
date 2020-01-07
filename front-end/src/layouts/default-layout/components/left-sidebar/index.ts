@@ -1,1 +1,1 @@
-export { default as LeftSidebar } from './left-sidebar.component';
+export { LeftSidebar } from './left-sidebar.component';

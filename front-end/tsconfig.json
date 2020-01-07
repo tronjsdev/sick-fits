@@ -24,8 +24,13 @@
     "typeRoots": ["./node_modules/@types", "./src/@types"],
     //"rootDirs": ["src"],
     "paths": {
+      /*"*": [
+        "node_modules*//*",
+        "src/layouts/default-layout/components*//*"
+      ],*/
       "@components": ["src/components"],
       "@components/styles": ["src/components/styles"],
+      "@components/site/*": ["src/layouts/default-layout/components/*"],
       "@libs": ["src/libs"],
       "@layouts": ["src/layouts"],
       "@interfaces": ["src/interfaces"],

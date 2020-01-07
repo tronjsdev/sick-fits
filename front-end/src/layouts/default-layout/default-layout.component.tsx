@@ -2,8 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { styled } from '@libs';
 import { CSSReset } from '@components';
-
-import { Header } from './components/header';
+import { Header } from '@components/site/header';
 
 const StyledPage = styled.div`
   background: white;

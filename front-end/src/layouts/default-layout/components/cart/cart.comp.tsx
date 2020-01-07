@@ -3,6 +3,8 @@ import gql from 'graphql-tag';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import { CartStyles, Supreme, CloseButton, SickButton } from '@components/styles';
 import { useToggleCart, useUser, calcTotalPrice, formatMoney } from '@libs';
+
+
 import { CartItem } from './cart-item.comp';
 
 const LOCAL_STATE_QUERY = gql`

@@ -4,4 +4,3 @@ export * from './create-item/create-item.component';
 export * from './update-item/update-item.component';
 export * from './delete-item/delete-item.component';
 export * from './signout/signout.comp';
-export * from './cart/cart.comp';

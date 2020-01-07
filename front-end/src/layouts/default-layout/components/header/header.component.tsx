@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { styled } from '@libs';
-import {Cart} from "@components";
+import { Cart } from '@components/site/cart';
 
 import { Nav } from '../nav';
 
@@ -72,4 +72,4 @@ const Header = () => (
   </StyledHeader>
 );
 
-export default Header;
+export {Header};

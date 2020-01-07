@@ -35,4 +35,4 @@ const LeftSidebar = ({ userInfo, isAuthenticated, ...props }) => {
   );
 };
 
-export default LeftSidebar;
+export {LeftSidebar};

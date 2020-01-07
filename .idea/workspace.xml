@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8249fd2-2cf3-41eb-951b-20725c47621a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/cart/cart-count.comp.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/cart/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/cart/cart-item.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/cart/cart-item.comp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/cart/remove-from-cart.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/cart/remove-from-cart.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/cart/cart-item.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/cart/cart-item.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/cart/cart.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/cart/cart.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/cart/remove-from-cart.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/cart/remove-from-cart.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/styles/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/styles/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/header/header.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/header/header.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/header/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/header/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/nav/nav.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/default-layout/components/nav/nav.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/layouts/default-layout/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/default-layout/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,17 +63,18 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/front-end/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front-end/src/layouts/default-layout/components" />
+      <recent name="$PROJECT_DIR$/front-end/src/pages/items/components" />
+      <recent name="$PROJECT_DIR$/front-end/src/pages/items" />
+      <recent name="$PROJECT_DIR$/front-end/src/pages/item" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/front-end/src/components/cart" />
       <recent name="$PROJECT_DIR$/front-end/src/pages/reset" />
       <recent name="$PROJECT_DIR$/front-end/src/pages/signup" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/front-end/src/libs" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/front-end/src/pages/items/components" />
-      <recent name="$PROJECT_DIR$/front-end/src/pages/items" />
-      <recent name="$PROJECT_DIR$/front-end/src/pages/item" />
     </key>
   </component>
   <component name="RunManager" selected="Attach to Node.js/Chrome.Attach">
@@ -114,7 +126,7 @@
       <workItem from="1578286277674" duration="5305000" />
       <workItem from="1578291780602" duration="947000" />
       <workItem from="1578316556210" duration="12809000" />
-      <workItem from="1578391009103" duration="6797000" />
+      <workItem from="1578391009103" duration="10341000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1577880963514</created>
@@ -424,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578400601606</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Lesson 43">
+      <created>1578401852929</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1578401852929</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +489,8 @@
     <MESSAGE value="Lesson 39" />
     <MESSAGE value="Lesson 41" />
     <MESSAGE value="Lesson 42" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 42" />
+    <MESSAGE value="Lesson 43" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 43" />
   </component>
   <component name="WindowStateProjectService">
     <state x="404" y="33" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578187474920">
@@ -485,11 +505,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="859" y="453" width="192" height="102" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577891522763" />
-    <state x="453" y="-26" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578400601544">
+    <state x="451" y="-48" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578401852859">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1045@0.0.1920.1045" timestamp="1578291670904" />
-    <state x="453" y="-26" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578400601544" />
+    <state x="451" y="-48" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578401852859" />
     <state width="1084" height="507" key="DebuggerActiveHint" timestamp="1578215733391">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -577,10 +597,10 @@
     </state>
     <state x="131" y="229" width="697" height="584" key="find.popup/0.0.1920.1045@0.0.1920.1045" timestamp="1578291069348" />
     <state x="131" y="237" width="697" height="584" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578292214292" />
-    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1578398170988">
+    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1578404053036">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578398170988" />
+    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578404053036" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
