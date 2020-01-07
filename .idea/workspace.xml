@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8249fd2-2cf3-41eb-951b-20725c47621a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/cart/cart-item.comp.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/cart/cart.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/cart/cart.comp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/styles/CartStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/styles/CartStyles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/libs/calcTotalPrice.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/libs/calcTotalPrice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/libs/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/libs/hooks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/libs/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/libs/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/pages/items/components/add-to-cart-btn.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/pages/items/components/add-to-cart-btn.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/cart/remove-from-cart.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/cart/remove-from-cart.comp.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +113,7 @@
       <workItem from="1578286277674" duration="5305000" />
       <workItem from="1578291780602" duration="947000" />
       <workItem from="1578316556210" duration="12809000" />
-      <workItem from="1578391009103" duration="3773000" />
+      <workItem from="1578391009103" duration="5713000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1577880963514</created>
@@ -408,7 +402,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578391968596</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Lesson 41">
+      <created>1578398151719</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1578398151719</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Lesson 42">
+      <created>1578400540364</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1578400540364</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +461,8 @@
     <MESSAGE value="Lesson 33" />
     <MESSAGE value="Lesson 39" />
     <MESSAGE value="Lesson 41" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 41" />
+    <MESSAGE value="Lesson 42" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 42" />
   </component>
   <component name="WindowStateProjectService">
     <state x="404" y="33" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578187474920">
@@ -468,11 +477,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="859" y="453" width="192" height="102" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577891522763" />
-    <state x="459" y="40" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578391968454">
+    <state x="455" y="-4" width="912" height="855" key="CommitChangelistDialog2" timestamp="1578400540296">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1045@0.0.1920.1045" timestamp="1578291670904" />
-    <state x="459" y="40" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578391968454" />
+    <state x="455" y="-4" width="912" height="855" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578400540296" />
     <state width="1084" height="507" key="DebuggerActiveHint" timestamp="1578215733391">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -560,10 +569,10 @@
     </state>
     <state x="131" y="229" width="697" height="584" key="find.popup/0.0.1920.1045@0.0.1920.1045" timestamp="1578291069348" />
     <state x="131" y="237" width="697" height="584" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578292214292" />
-    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1578396816929">
+    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1578398170988">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578396816929" />
+    <state x="143" y="234" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578398170988" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
