@@ -32,7 +32,11 @@ const Nav = () => {
 
           <button type="button" onClick={() => toggleCart()}>
             My Cart
-            <CartCount />
+            <CartCount
+              count={me.cart.reduce((accumulator, currentCartItem) => {
+                return parseInt(accumulator, 10) + parseInt(currentCartItem.quantity, 10);
+              }, 0)}
+            />
           </button>
 
           <Signout />
