@@ -11,6 +11,7 @@ const CartItemStyles = styled.li`
   grid-template-columns: auto 1fr auto;
   img {
     max-height: 64px;
+    margin-right: 10px;
   }
   h3,
   p {
