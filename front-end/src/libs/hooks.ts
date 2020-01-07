@@ -1,4 +1,3 @@
-
 import { useMutation, useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
@@ -9,6 +8,10 @@ export const CURRENT_USER_QUERY = gql`
       email
       name
       permissions
+      cart {
+        id
+        quantity
+      }
     }
   }
 `;

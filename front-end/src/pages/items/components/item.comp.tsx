@@ -1,11 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { formatMoney } from '@libs';
-import {DeleteItem} from "@components";
+import { DeleteItem } from '@components';
+import { Title, ItemStyles, PriceTag } from '@components/styles';
 
-import Title from '../styles/Title';
-import ItemStyles from '../styles/ItemStyles';
-import PriceTag from '../styles/PriceTag';
+import { AddToCartButton } from './add-to-cart-btn.comp';
 
 interface Props {
   item: any;
@@ -39,8 +38,10 @@ const Item: React.FunctionComponent<Props> = props => {
         >
           <a>Edit</a>
         </Link>
-        <button type="button">Add To Cart</button>
-        <DeleteItem id={item.id} page={page}>Delete</DeleteItem>
+        <AddToCartButton itemId={item.id} />
+        <DeleteItem id={item.id} page={page}>
+          Delete
+        </DeleteItem>
       </div>
     </ItemStyles>
   );

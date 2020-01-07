@@ -6,8 +6,9 @@ import { Signout } from '@components';
 
 const Nav = () => {
   const { data }: any = useUser();
-  const [toggleCart] = useToggleCart();
   const { me } = data || {};
+  //const me = {};
+  const [toggleCart] = useToggleCart();
   return (
     <NavStyles>
       <Link href="/items">

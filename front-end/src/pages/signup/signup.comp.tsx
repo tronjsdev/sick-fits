@@ -2,8 +2,9 @@ import React from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import { Form } from '@components/styles';
-import { CURRENT_USER_QUERY, DisplayError } from '@components';
+import { DisplayError } from '@components';
 import faker from 'faker';
+import {CURRENT_USER_QUERY} from "@libs";
 
 const SIGNUP_MUTATION = gql`
   mutation SIGNUP_MUTATION($email: String!, $name: String!, $password: String!) {

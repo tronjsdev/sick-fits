@@ -2,7 +2,7 @@ import React from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import { Form } from '@components/styles';
-import { DisplayError, CURRENT_USER_QUERY } from '@components';
+import { DisplayError } from '@components';
 
 const RESET_MUTATION = gql`
   mutation RESET_MUTATION($email: String!) {

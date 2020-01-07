@@ -2,10 +2,11 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import { styled } from '@libs';
-import { Item } from '@src/components';
 import { Pagination } from '@src/pages/items/components/pagination.comp';
 
 import { perPage } from '../../../config/config';
+
+import { Item } from './item.comp';
 
 const ALL_ITEMS_QUERY = gql`
   query ALL_ITEMS_QUERY($skip: Int = 0, $first: Int=${perPage}) {

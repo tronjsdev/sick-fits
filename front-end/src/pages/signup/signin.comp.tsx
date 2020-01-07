@@ -2,7 +2,8 @@ import React from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import { Form } from '@components/styles';
-import { DisplayError, CURRENT_USER_QUERY } from '@components';
+import { DisplayError } from '@components';
+import {CURRENT_USER_QUERY} from "@libs";
 
 const SIGNIN_MUTATION = gql`
   mutation SIGNIN_MUTATION($email: String!, $password: String!) {
@@ -22,6 +23,7 @@ const SigninComp = () => {
   const [signin, { loading, data, error }] = useMutation(SIGNIN_MUTATION, {
     variables: signinFormData,
     refetchQueries: [{ query: CURRENT_USER_QUERY }],
+    awaitRefetchQueries: true
   });
   const handleInput = React.useCallback(
     e => {
