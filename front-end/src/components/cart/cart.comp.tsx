@@ -2,7 +2,8 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import { CartStyles, Supreme, CloseButton, SickButton } from '@components/styles';
-import { useToggleCart, useUser } from '@libs';
+import { useToggleCart, useUser, calcTotalPrice, formatMoney } from '@libs';
+import { CartItem } from './cart-item.comp';
 
 const LOCAL_STATE_QUERY = gql`
   query {
@@ -30,9 +31,13 @@ const Cart = () => {
         <Supreme>Your Cart</Supreme>
         <p>You Have {me.cart.length} Items in your cart.</p>
       </header>
-
+      <ul>
+        {userData.me.cart.map(x => (
+          <CartItem key={x.id} cartItem={x} />
+        ))}
+      </ul>
       <footer>
-        <p>$10.10</p>
+        <p>{formatMoney(calcTotalPrice(me.cart))}</p>
         <SickButton>Checkout</SickButton>
       </footer>
     </CartStyles>

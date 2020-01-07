@@ -5,7 +5,6 @@ const CartStyles = styled.div`
   position: relative;
   background: white;
   position: fixed;
-  height: 100%;
   top: 0;
   right: 0;
   width: 40%;
@@ -40,7 +39,8 @@ const CartStyles = styled.div`
     margin: 0;
     padding: 0;
     list-style: none;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 `;
 
